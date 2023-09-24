@@ -7,12 +7,12 @@ import post1 from "../../assets/hero1.jpg"
 import post2 from "../../assets/hero2.jpg"
 import post3 from "../../assets/hero3.jpg"
 import post4 from "../../assets/hero4.jpg"
-import { BsFacebook, BsInstagram } from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
 import { Autoplay } from 'swiper/modules';
 
 export default function Post() {
-  const post_box="flex w-[100%] h-[20vh] overflow-hidden";
-  const post_img="flex w-[100%] h-[100%] object-cover hover:scale-100";
+   /*const post_box="flex w-[100%] h-[20vh] overflow-hidden";
+  const post_img="flex w-[100%] h-[100%] object-cover hover:scale-100";*/
   return (
 
     <div className='flex flex-col w-[100%] h-max px-[2.5%] justify-center items-center pt-[70px] pb-[50px]  border-b-[1.5px]'>
@@ -25,8 +25,8 @@ export default function Post() {
 
    
 <Swiper
-        slidesPerView={4}
-        spaceBetween={60}
+        slidesPerView={1}
+        spaceBetween={0}
         loop={true}
       
         autoplay={{
@@ -38,7 +38,7 @@ export default function Post() {
         
         
         breakpoints={{
-          240: {
+          250: {
             slidesPerView: 2,
             spaceBetween: 20,
           },

@@ -17,7 +17,7 @@ export default function Hero() {
   const hero_heading='flex flex-col lg:gap-2 w-[100%] h-[100%] px-4 md:px-24 lg:px-40 justify-center  text-green-800';
   const hero_paragraph="hidden md:flex font-poppins font-200 text-gray-900 pr-[40%] py-6 text-[10px] md:text-[14px]";
   const hero_button='flex w-max px-5 md:px-6 py-3 border-[1px] md:border-[2px] border-green-900 uppercase font-poppins font-[500] mt-[30px] md:mt-0 tracking-widest text-[12px] md:text-[14px] hover:bg-green-950 hover:text-white';
-  const hero_img='flex absolute w-[50%]  h-[100%] ml-[50%]  object-contain';
+  const hero_img='flex absolute w-[50%]  h-[100%] ml-[50%]  object-contain z-[1100000]';
   
   return (
 

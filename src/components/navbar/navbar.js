@@ -35,7 +35,7 @@ export default function Navbar() {
     const linkStyle2='flex text-2xl cursor-pointer hover:text-5xl';
     return (
         
-        <div className='flex  lg:absolute w-[100%] px-4 md:px-12 lg:px-40 py-3   justify-between h-[75px] md:h-[90px] lg:h-[100px] items-center z-[100] shadow-md lg:shadow-none '>
+        <div className='flex  lg:absolute w-[100%] px-4 md:px-12 lg:px-40 py-3   justify-between h-[75px] md:h-[90px] lg:h-[100px] items-center z-[100] absolute shadow-md lg:shadow-none '>
           
           <div className='flex w-max h-[100%] '>
             
@@ -70,7 +70,7 @@ export default function Navbar() {
            </div>
 
 
-                 <div className=' flex fixed  h-[100vh]  top-[0] right-0 bg-[#ffffffb6] overflow-hidden  backdrop-blur rounded-md ease-in-out duration-700 ' style={{ width:clicked? '100vw' :'0px'}}>
+                 <div className=' flex fixed  h-[100vh]  top-[0] right-0 bg-[#ffffffb6] overflow-hidden  backdrop-blur rounded-md ease-in-out duration-700 overflow-y-visible' style={{ width:clicked? '100vw' :'0px'}}>
 
                     <ul className=' flex  font-libre uppercase  text-green-800 flex-col  justify-center items-center py-10 px-4 gap-10 linear duration-[1000ms]' style={{width:clicked? '100%' : '0px', color: clicked? 'rgb(22 101 52 )':'white'}}>
 

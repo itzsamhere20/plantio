@@ -16,3 +16,12 @@
 .swiper-pagination-bullet-active {
   background-color: #105714b4 !important;
 }
+::placeholder
+{
+  font-family: 'poppins';
+  font-size: 15px;
+}
+*:focus
+{
+  outline: none;
+}

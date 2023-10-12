@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+import {
+  Collapse,
+  initTE,
+} from "tw-elements";
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",

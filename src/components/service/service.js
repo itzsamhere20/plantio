@@ -7,7 +7,7 @@ import {BsArrowRight} from "react-icons/bs"
 
 export default function Service() {
   const service_box='flex flex-col w-[100%] h-auto overflow-hidden items-center md:items-start';
-  const service_img='flex  w-[100%] h-[900px] md:h-[400px] lg:h-[600px] cursor-pointer object-cover mb-[3%] hover:animate-shake'
+  const service_img='flex  w-[100%] h-[700px] md:h-[400px] lg:h-[500px] cursor-pointer object-cover mb-[3%] hover:animate-shake'
   return (
 
 

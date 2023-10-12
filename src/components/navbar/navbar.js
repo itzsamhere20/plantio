@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import logo from "../../assets/logo.png"
 import {HiOutlineBars3BottomRight} from "react-icons/hi2"
-
 import  { GiHamburgerMenu } from "react-icons/gi"
 import { AiOutlineClose } from "react-icons/ai"
+import {RiAdminFill} from"react-icons/ri"
+import { Link } from "react-router-dom";
 export default function Navbar() {
 
     const [scrolled, setscrolled] = useState(false);
@@ -35,16 +36,16 @@ export default function Navbar() {
     const linkStyle2='flex text-2xl cursor-pointer hover:text-5xl';
     return (
         
-        <div className='flex  lg:absolute w-[100%] px-4 md:px-12 lg:px-40 py-3   justify-between h-[75px] md:h-[90px] lg:h-[100px] items-center z-[100] absolute shadow-md lg:shadow-none '>
+        <div className='flex absolute md:relative lg:absolute w-[100%] px-4 md:px-12 lg:px-20 py-3   justify-between h-[75px] md:h-[90px] lg:h-[100px] items-center z-[100] shadow-md lg:shadow-none '>
           
-          <div className='flex w-max h-[100%] '>
+          <div className='flex w-[20%] h-[100%]'>
             
                 <img src={logo} alt='logo' className='w-[100%] h-[100%] object-contain cursor-pointer' />
                 
         
             </div>
 
-           <div className='flex  h-auto' >
+           <div className='flex  h-auto w-[60%] justify-center items-center' >
             <ul className='hidden lg:flex gap-10  text-green-800  capitalize font-poppins font-[500] tracking-wide'>
                 <li className={linkStyle}>home</li>
                 <li className={linkStyle}>about</li>
@@ -52,7 +53,14 @@ export default function Navbar() {
                 <li className={linkStyle}>contact</li>
                  
             </ul>
+           
            </div>
+
+               <div className='hidden  w-[20%] lg:flex   items-center   text-white text-xl justify-end '>
+               <Link  to='admin'className=' flex bg-green-900 rounded-full  py-3 px-3 '><RiAdminFill /></Link> </div>
+          
+          
+          
            <div  className='lg:hidden flex w-max h-max justify-center items-center text-3xl md:text-4xl  z-[99] cursor-pointer text-green-800  linear duration-300' onClick={()=>setClicked(!clicked)}  style={{rotate:clicked?'90deg' :'0deg', }}> 
            {clicked? <AiOutlineClose /> : <HiOutlineBars3BottomRight/> }
            </div>
@@ -70,9 +78,9 @@ export default function Navbar() {
            </div>
 
 
-                 <div className=' flex fixed  h-[100vh]  top-[0] right-0 bg-[#ffffffb6] overflow-hidden  backdrop-blur rounded-md ease-in-out duration-700 overflow-y-visible' style={{ width:clicked? '100vw' :'0px'}}>
+                 <div className=' flex  flex-col items-center fixed  h-[100vh]  top-[0] right-0 bg-[#ffffffb6] overflow-hidden  backdrop-blur rounded-md ease-in-out duration-700 overflow-y-visible' style={{ width:clicked? '100vw' :'0px'}}>
 
-                    <ul className=' flex  font-libre uppercase  text-green-800 flex-col  justify-center items-center py-10 px-4 gap-10 linear duration-[1000ms]' style={{width:clicked? '100%' : '0px', color: clicked? 'rgb(22 101 52 )':'white'}}>
+                    <ul className=' flex  font-libre uppercase h-[80%] text-green-800 flex-col  justify-center items-center py-10 px-4 gap-10 linear duration-[1000ms]' style={{width:clicked? '100%' : '0px', color: clicked? 'rgb(22 101 52 )':'white'}}>
 
                     <li className={linkStyle2}>home</li>
                     <li className={linkStyle2}>About</li>
@@ -80,6 +88,9 @@ export default function Navbar() {
                     <li className={linkStyle2}>contact</li>
                  
                     </ul>
+
+                    <Link  to='admin'className='flex w-[10%] py-3 px-3 bg-green-900  justify-center items-center rounded-md font-poppins text-white text-2xl top-0'><RiAdminFill /></Link>
+
 
 
 

@@ -1,33 +1,28 @@
 
 import './App.css';
-import Navbar from "./components/navbar/navbar";
-import Hero from "./components/hero/hero"
-import Service from './components/service/service';
-import Shopnow from './components/shop now/shopnow';
-import New from './components/new arrivals/new';
-import Quality from "./components/quality/quality"
-import Story from "./components/our story/story"
-import Discount from "./components/discount/discount"
-import Post from "./components/posts/post"
-import Footer from "./components/footer/footer"
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Home from './components/home';
+import Shop,{detaildata} from './components/shop/shop';
+import ProductDetail from './components/productDetail/productDetail';
+import AdminPanel from './components/admin/AdminPanel';
 
 
 function App() {
   return (
-    <div className="">
+    <>
+  <BrowserRouter>
+  
     
-        <Navbar />
-        <Hero />
-        <Service/>
-        <Shopnow/>
-        <New />
-        <Quality/>
-        <Story />
-        <Discount />
-        <Post />
-        <Footer />
-      
-    </div>
+<Routes>
+
+        <Route  path='/' element={<Home/>} />
+        <Route exact path='admin' element={<AdminPanel/>} />
+        </Routes>
+
+    </BrowserRouter>
+    
+    </>
+    
   );
 }
 

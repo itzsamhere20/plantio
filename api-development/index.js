@@ -4,7 +4,7 @@ const express = require("express");
 const connectToMongo = require("./db");
 const app = express();
 connectToMongo();
-const appPort = process.env.PORT || 5000;
+const appPort = process.env.PORT || 2000;
 
 
 const server = app.listen(appPort, () => {
@@ -29,7 +29,7 @@ app.get('/' , async (req, res) => {
 
 
 
-
-  
+  app.use("/api/auth", require("./routes/auth"));
+  app.use("/api/products", require("./routes/product"));
 
 

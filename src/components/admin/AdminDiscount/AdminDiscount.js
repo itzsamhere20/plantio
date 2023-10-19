@@ -97,7 +97,7 @@ const clearForm=()=>
 
           <div className='flex flex-col gap-2 w-[100%] lg:w-[50%]'>
            <p className=' px-1 lg:px-5'>Amount </p>
-          <input  type={'number'} id='section_Discount' placeholder='Write delivery discount here' className={section_input}onChange={(e)=>setAmount(e.target.value)} />
+          <input  type={'number'} min="0"  id='section_Discount' placeholder='Write delivery discount here' className={section_input}onChange={(e)=>setAmount(e.target.value)} />
           </div>
 
          </div>

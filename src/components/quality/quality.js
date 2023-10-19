@@ -12,6 +12,8 @@ export default function Quality() {
 
     <div className='grid grid-cols-1 md:grid-cols-3 py-[50px]  w-[100%] h-max bg-gray-100 justify-center items-center '>
 
+
+
 <div className={quality_box}>
   <img src={garentee} className='w-[75px] md:w-[100px] hover:animate-shake duration-100 ' />
   <h1 className={quality_box_heading}>Unbeatable <i>quality</i></h1>

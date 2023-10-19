@@ -141,13 +141,15 @@ const clearForm=()=>
         <label for="img" className='flex w-[100%] md:w-max flex-wrap justify-center items-center text-white text-[13px] md:text-lg bg-green-900  py-4 gap-3 md:gap-5 px-2 md:px-8 hover:bg-green-800 '><BiUpload className='text-lg md:text-3xl '/>Choose a Image</label>
         
        
-        {img!==null &&
+  
+</div>
+
+
+{img!==null &&
         <div className='flex w-[100%] p-2 justify-center items-center'>
            <img src={img} alt="" className='w-[100%] lg:w-[300px] h-[300px] object-cover' />
         </div>}
        
-  
-</div>
 
 </div>
 

@@ -4,6 +4,7 @@ import {HiOutlineBars3BottomRight} from "react-icons/hi2"
 import  { GiHamburgerMenu } from "react-icons/gi"
 import { AiOutlineClose } from "react-icons/ai"
 import {RiAdminFill} from"react-icons/ri"
+import {CiUser} from "react-icons/ci"
 import { Link } from "react-router-dom";
 export default function Navbar() {
 
@@ -57,6 +58,7 @@ export default function Navbar() {
            </div>
 
                <div className='hidden  w-[20%] lg:flex   items-center   text-white text-xl justify-end '>
+               <Link  to='sign-up'className='flex bg-green-900 rounded-full  py-3 px-3 '><CiUser /></Link>
                <Link  to='admin'className=' flex bg-green-900 rounded-full  py-3 px-3 '><RiAdminFill /></Link> </div>
           
           
@@ -88,6 +90,9 @@ export default function Navbar() {
                     <li className={linkStyle2}>contact</li>
                  
                     </ul>
+
+
+                    <Link  to='sign-up'className='flex w-[10%] py-3 px-3 bg-green-900  justify-center items-center rounded-md font-poppins text-white text-2xl top-0'><CiUser /></Link>
 
                     <Link  to='admin'className='flex w-[10%] py-3 px-3 bg-green-900  justify-center items-center rounded-md font-poppins text-white text-2xl top-0'><RiAdminFill /></Link>
 

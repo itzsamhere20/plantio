@@ -19,8 +19,18 @@
 ::placeholder
 {
   font-family: 'poppins';
-  font-size: 15px;
+  font-size: 14px;
 }
+#signup-form::placeholder
+{
+  
+  font-family: 'poppins';
+  font-size: 14px;
+  font-weight: 200;
+  color: whitesmoke;
+
+}
+
 *:focus
 {
   outline: none;
@@ -36,21 +46,75 @@
 	z-index: -1;
 }
 
+
+
+#about_img3:hover + #about_img2
+{
+  width: 80000px;
+}
+
 #sidemenu::-webkit-scrollbar {
   width: 0px;
   background: transparent;
  }
 
 
-@media only screen and (min-width:200px)
+@media only screen and (min-width:640px)
+{
+  ::placeholder
+{
+  font-family: 'poppins';
+  font-size: 15px;
+}
+
+  #signup-form::placeholder
 {
   
+  font-family: 'poppins';
+  font-size: 15px;
+  padding: 0px 1px;
+  color: whitesmoke;
+
+}
 
 
 }
 @media only screen and (min-width:1024px)
 {
+  ::placeholder
+  {
+    
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  #signup-form::placeholder
+{
   
+ 
+  font-size: 16px;
+  
+
+}
 
 
 }
+@media only screen and (min-width:1500px)
+{
+  ::placeholder
+  {
+   
+    font-size: 23px;
+    font-weight: 400;
+  }
+
+  #signup-form::placeholder
+{
+  
+  font-size: 30px;
+
+}
+
+
+}
+

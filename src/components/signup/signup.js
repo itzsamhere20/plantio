@@ -5,13 +5,15 @@ import loginImage from "../../assets/login.jpg"
 import signupImage from "../../assets/signup.jpg"
 import {AiFillHome} from "react-icons/ai"
 import {PiEyeLight,PiEyeSlashLight} from"react-icons/pi"
+import {motion} from "framer-motion"
+
 
 export default function Signup() {
     const [signup,setSignup]=useState(false);
     const [showpassword,setshowPassword]=useState(false);
     const right_side_section='flex flex-col w-[100%] duration-700  px-5 md:px-7 lg:px-10 2xl:px-20'
     const right_side_h1='text-4xl 2xl:text-[4rem] font-libre   pb-5 md:pb-5 lg:pb-8 2xl:pb-28 px-1 md:px-2 lg:px-5 2xl:px-10'
-    const right_side_form='flex flex-col py-5 2xl:py-10 px-1 md:px-3 lg:px-5 2xl:px-10 gap-8 lg:gap-10 2xl:gap-24'
+    const right_side_form='flex flex-col 2xl:py-10 px-1 md:px-3 lg:px-5 2xl:px-10 gap-8 lg:gap-10 2xl:gap-24'
     const password_section='flex w-[100%] items-center border-b-[1px] border-white py-3  px-1 gap-2'
 
     const form_inputs='border-b-[1px] 2xl:text-[30px] border-white bg-transparent py-3 px-1'
@@ -19,7 +21,11 @@ export default function Signup() {
    
   return (
 
-    <div className='flex flex-col min-h-[100vh]  items-center  justify-center   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 100%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
+    <motion.div
+    initial={{ x: '-100%' }}
+    animate={{ x: '0%' }}
+    transition={{ duration: 0.1, ease: 'easeIn' }}
+    exit={{ opacity: 0 }} className='flex flex-col min-h-[100vh]  items-center  justify-center   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 140%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
 
 
 
@@ -34,15 +40,15 @@ export default function Signup() {
          <div className='flex  flex-col md:flex-row  w-[80%] md:w-[70%]  gap-0 md:gap-1 overflow-hidden pb-5 '>
 
 
-{/* -------------------------login-left-side------------------------- */}
+{/* -------------------------left-side------------------------- */}
 
                 <div className=' flex  w-[100%] md:w-[40%] h-[250px] md:h-auto md:flex    md:rounded-l-xl  md:border-[1px] md:border-r-0 overflow-hidden'>
                
                     <img src={loginImage} alt="flower image" className='flex w-[100%] 
                     h-max md:h-auto
-               object-cover bg-yellow-300 md:rounded-l-xl  duration-700' style={{marginLeft: window.innerWidth>768? signup?'-100%':'0' : signup?'100%' :'0'}} />
+               object-cover bg-gray-100 md:rounded-l-xl  duration-700' style={{marginLeft: window.innerWidth>768? signup?'-100%':'0' : signup?'100%' :'0'}} />
 
-                <img src={signupImage} alt="flower image" className=' flex bg-pink-400   w-[100%] 
+                <img src={signupImage} alt="flower image" className=' flex bg-gray-100   w-[100%] 
                 h-max md:h-auto
                   md:rounded-l-xl object-cover   duration-700 'style={{marginLeft:window.innerWidth<768? '-200%':'0'}} />
                
@@ -51,7 +57,7 @@ export default function Signup() {
 
 
 
-                     {/* ----------------------login-right-side----------------------- */}
+                     {/* ----------------------right-side----------------------- */}
 
       
 
@@ -95,7 +101,7 @@ export default function Signup() {
 
               {/* -------------------------login button -------------------------                */}
 
-                            <div className='flex flex-col w-[100%] gap-3 2xl:gap-7 justify-center items-center'>
+                            <div className='flex flex-col w-[100%] gap-3 2xl:gap-7 justify-center items-center mt-20 '>
                             <button className='flex w-[100%] py-3 2xl:py-6 justify-center items-center  2xl:text-[30px] bg-green-900 uppercase hover:bg-green-800 duration-300'>Login</button>
                             <p className='text-[13px]  2xl:text-3xl md:text-sm'>Don't have an account ? <u className='cursor-pointer font-[600]' onClick={()=>setSignup(true)}>create one</u></p>
                             </div>
@@ -112,7 +118,7 @@ export default function Signup() {
                       
 
 
-                     <div className={right_side_section} style={{marginRight:signup?'0':'-140%'}}>
+                     <div className={right_side_section} style={{marginRight:signup?'0':'-100%'}}>
 
                      <h1 className={right_side_h1}>SignUp</h1>
                         
@@ -178,6 +184,6 @@ export default function Signup() {
     
 
        
-    </div>
+    </motion.div>
   )
 }

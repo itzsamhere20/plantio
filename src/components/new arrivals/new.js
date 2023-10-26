@@ -15,7 +15,7 @@ export default function New() {
   const product_img='block w-[100%] h-[250px] md:h-[320px] lg:h-[400px] object-cover';
   const product_title='mt-5 mb-1 h-max text-center font-libre text-gray-600 tracking-[1px] text-[14px] md:text-sm capitalize'
   return (
-    <div className='flex flex-col w-[95%] h-max mx-[2.5%] py-[70px] justify-center items-center'>
+    <div className='flex flex-col w-[100%] h-max px-10 2xl:px-60 py-[70px] justify-center items-center'>
       <h1 className='font-libre gap-5 text-2xl md:text-3xl capitalize  pb-[20px] text-gray-800'>new <i className='text-green-800'>Arrivals </i></h1>
 
 <Swiper

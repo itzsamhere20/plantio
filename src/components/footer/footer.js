@@ -13,7 +13,7 @@ const footer_social="flex  justify-center items-center text-gray-800  text-[16px
   return (
     <div className='flex flex-col w-[100%]  h-max'>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[100%] h-max  py-[50px] px-[2.5%] gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[100%] h-max  py-[50px] px-5 md:px-10 2xl:px-60 gap-10'>
 
 
 
@@ -112,8 +112,8 @@ const footer_social="flex  justify-center items-center text-gray-800  text-[16px
           </p>
            <div className='w-[100%] h-max flex items-end  py-2 border-b-2 border-black text-poppins  text-sm'>
 
-               <input style={{border:'none'}}type='email' className='flex w-[100%] pr-2 ' placeholder='Enter your email'/>
-              <MdEmail className='flex h-max  cursor-pointer text-3xl lg:text-2xl text-green-800 ' /> 
+               <input style={{border:'none'}}type='email' className='flex w-[100%] pr-2  bg-transparent' placeholder='Enter your email'/>
+              <MdEmail className='flex h-max items-center cursor-pointer text-3xl lg:text-2xl text-green-800 ' /> 
        
             </div>
             <div className='flex w-[100%] h-max gap-5 pt-10'>
@@ -133,7 +133,7 @@ const footer_social="flex  justify-center items-center text-gray-800  text-[16px
 
 
 
-      <div className='flex  flex-col md:flex-row md:text-left w-[100%] h-max font-poppins text-gray-400 gap-2 py-3 md:py-5 border-t-[1px] px-[2.5%] justify-between ease-in-out duration-300'>
+      <div className='flex  flex-col md:flex-row md:text-left w-[100%] h-max font-poppins text-gray-400 gap-2 py-3 md:py-5 border-t-[1px] px-10 2xl:px-60 justify-between ease-in-out duration-300'>
 
 
         <h1 className='text-[12px] md:text-sm flex w-[100%] md:w-max justify-center'>©{new Date().getFullYear()} Plantio Store</h1>

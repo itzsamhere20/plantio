@@ -4,19 +4,20 @@ import service1 from "../../assets/service1.jpg"
 import service2 from "../../assets/service2.jpg"
 import service3 from "../../assets/service3.jpg"
 import {BsArrowRight} from "react-icons/bs"
+import { Link } from 'react-router-dom'
 
 export default function Service() {
   const service_box='flex flex-col w-[100%] h-auto overflow-hidden items-center md:items-start';
-  const service_img='flex  w-[100%] h-[700px] md:h-[400px] lg:h-[500px] cursor-pointer object-cover mb-[3%] hover:animate-shake'
+  const service_img='flex  w-[100%] h-[700px] md:h-[400px] lg:h-[500px] 2xl:h-[650px] cursor-pointer object-cover mb-[3%] hover:animate-shake'
   return (
 
 
-    <div className='grid grid-cols-1 md:grid-cols-3 items-center w-[95%] mx-[2.5%] h-auto pt-[70px]  md:gap-10 pb-[50px] '>
+    <div className='grid grid-cols-1 md:grid-cols-3 items-center w-[100%] px-10 2xl:px-60 h-auto pt-[70px]  md:gap-10 pb-[50px] '>
 
  
 
 
-<div className={service_box}>
+<Link to='/shop' className={service_box}>
     <img src={service1} className={service_img} alt='service 1 img' />
 
   <div className='service_title'>
@@ -29,13 +30,13 @@ export default function Service() {
 
     </div>
   
-  </div>
+  </Link>
 
 
 
 
 
-  <div className={service_box}>
+  <Link to='/shop' className={service_box}>
     <img src={service2} className={service_img} alt='service 2 img' />
 
   <div className='service_title'>
@@ -48,7 +49,7 @@ export default function Service() {
 
     </div>
   
-  </div>
+  </Link>
 
 
 
@@ -58,7 +59,7 @@ export default function Service() {
 
 
 
- <div className={service_box}>
+ <Link to='/shop' className={service_box}>
     <img src={service3} className={service_img} alt='service 3 img' />
 
   <div className='service_title'>
@@ -71,7 +72,7 @@ export default function Service() {
 
     </div>
   
-  </div>
+  </Link>
 
 
  

@@ -35,6 +35,15 @@
 {
   outline: none;
 }
+*::-moz-selection { /* Code for Firefox */
+  color: whitesmoke;
+  background: rgb(17, 88, 17);
+}
+
+*::selection {
+  color: whitesmoke;
+  background: rgb(17, 88, 17);
+}
 
 
 .inputfile {
@@ -44,6 +53,18 @@
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 

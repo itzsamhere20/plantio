@@ -30,6 +30,12 @@
   color: whitesmoke;
 
 }
+#nav_search::placeholder
+{
+  font-size: 1.5rem;
+  color: rgb(119, 119, 119);
+  font-family: 'poppins';
+}
 
 *:focus
 {
@@ -73,8 +79,13 @@ input[type=number] {
 {
   width: 80000px;
 }
+#nav_product_area::-webkit-scrollbar
+{
+  width: 0px;
+  background: transparent
+}
 
-#sidemenu::-webkit-scrollbar {
+#adminSideMenu::-webkit-scrollbar {
   width: 0px;
   background: transparent;
  }
@@ -97,6 +108,13 @@ input[type=number] {
   color: whitesmoke;
 
 }
+#nav_search::placeholder
+{
+  font-size: 2rem;
+  color: rgb(119, 119, 119);
+  font-family: 'poppins';
+}
+
 
 
 }

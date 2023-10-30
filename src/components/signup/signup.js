@@ -1,38 +1,32 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom"
 import bg from "../../assets/signupbg.jpg"
 import loginImage from "../../assets/login.jpg"
 import signupImage from "../../assets/signup.jpg"
-import {AiFillHome} from "react-icons/ai"
 import {PiEyeLight,PiEyeSlashLight} from"react-icons/pi"
 import {motion} from "framer-motion"
+
 
 
 export default function Signup() {
     const [signup,setSignup]=useState(false);
     const [showpassword,setshowPassword]=useState(false);
-    const right_side_section='flex flex-col w-[100%] duration-700  px-5 md:px-7 lg:px-10 2xl:px-20'
-    const right_side_h1='text-4xl 2xl:text-[4rem] font-libre   pb-5 md:pb-5 lg:pb-8 2xl:pb-28 px-1 md:px-2 lg:px-5 2xl:px-10'
-    const right_side_form='flex flex-col 2xl:py-10 px-1 md:px-3 lg:px-5 2xl:px-10 gap-8 lg:gap-10 2xl:gap-24'
+    const right_side_section='flex flex-col w-[100%] duration-700  px-5 md:px-7 lg:px-10 '
+    const right_side_h1='text-4xl  font-libre   pb-5 md:pb-5 lg:pb-8  px-1 md:px-2 lg:px-5 '
+    const right_side_form='flex flex-col  px-1 md:px-3 lg:px-5  gap-8 lg:gap-10'
     const password_section='flex w-[100%] items-center border-b-[1px] border-white py-3  px-1 gap-2'
 
-    const form_inputs='border-b-[1px] 2xl:text-[30px] border-white bg-transparent py-3 px-1'
+    const form_inputs='border-b-[1px]  border-white bg-transparent py-3 px-1'
 
    
   return (
-
+    <>
+    
     <motion.div
     initial={{ x: '-100%' }}
     animate={{ x: '0%' }}
     transition={{ duration: 0.1, ease: 'easeIn' }}
-    exit={{ opacity: 0 }} className='flex flex-col min-h-[100vh]  items-center  justify-center   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 140%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
+    exit={{ opacity: 0 }} className='flex min-h-[90vh]  py-10 mt-[20px] lg:mt-[100px] items-center  justify-center   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 140%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
 
-
-
-
- <div className=' flex z-[100]  text-white p-6 rounded-full'>
-<Link to='/'>   <AiFillHome className=' hover:drop-shadow-[0px_0px_15px_white]  text-3xl 2xl:text-[50px]'/> </Link>
-</div>
 
 
             {/* ----------------------form section--------------------- */}
@@ -185,5 +179,7 @@ export default function Signup() {
 
        
     </motion.div>
+    </>
+
   )
 }

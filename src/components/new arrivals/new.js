@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import product1 from "../../assets/hero1.jpg"
-import product2 from "../../assets/hero2.jpg"
-import product3 from "../../assets/hero3.jpg"
-import product4 from "../../assets/hero4.jpg"
-import product5 from "../../assets/hero5.jpg"
-import product6 from "../../assets/hero6.png"
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function New() {
-  const product_box='p-2 cursor-pointer flex flex-col w-auto h-max ';
-  const product_img='block w-[100%] h-[250px] md:h-[320px] lg:h-[400px] object-cover';
-  const product_title='mt-5 mb-1 h-max text-center font-libre text-gray-600 tracking-[1px] text-[14px] md:text-sm capitalize'
+  
+
+  const [products,setProducts]=useState([])
+  
+  
+  const fetchData=()=>
+  {
+    axios.get('https://fakestoreapi.com/products?limit=7')
+    .then((res)=> setProducts(res.data) )
+    
+  }
+  useEffect(()=>
+  { 
+    fetchData()
+
+  },[])
+  console.log('new products are:',products)
+  
+  
+  
+  
   return (
-    <div className='flex flex-col w-[100%] h-max px-10 2xl:px-60 py-[70px] justify-center items-center'>
-      <h1 className='font-libre gap-5 text-2xl md:text-3xl capitalize  pb-[20px] text-gray-800'>new <i className='text-green-800'>Arrivals </i></h1>
+    <div className='flex flex-col w-[100%] h-max px-5 md-px-10 lg:px-20 2xl:px-60 py-[70px] justify-center items-center'>
+      <h1 className='font-libre gap-5 text-2xl md:text-3xl capitalize mb-10 text-gray-800'>new <i className='text-green-800'>Arrivals </i></h1>
 
 <Swiper
         slidesPerView={2}
-        spaceBetween={0}
+        spaceBetween={10}
         loop={true}
         pagination={{
           clickable: true,
@@ -30,7 +44,7 @@ export default function New() {
           
           768: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 4,
@@ -39,89 +53,37 @@ export default function New() {
          
         }}
         modules={[Pagination]}
-        className="w-[100%] h-[380px] md:h-[450px] lg:h-[550px] flex"
+        className="w-[100%] h-[300px] md:h-[350px] lg:h-[450px]"
       >
 
 
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product1} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product2} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product3} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product4} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product5} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-          <div className={product_box}>
-            <img src={product6} alt="new products" className={product_img} />
-            <div className={product_title}><h1>pine tree</h1>
-            <h1>$100</h1>
-            </div>
-            </div>
-        </SwiperSlide>
-
-
-
-
-
-
-
-
+          {products.map((data)=>
+          (  <SwiperSlide>
+            <Link to={`/shop/${data.category}/${data.id}`}
+            onClick={() => {
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              });
+            }}
+            
+             >
+               <div className="px-5 shadow-md rounded-lg py-5 cursor-pointer flex flex-col w-[100%]">
+                <img
+                  src={data.image}
+                  alt="same category products"
+                  className="block w-[100%] h-[150px] md:h-[200px] lg:h-[280px] object-contain"
+                />
+                <div className="flex flex-col justify-center items-center pt-5 gap-2  md:gap-3  font-poppins text-[#9b9c9e] text-xs md:text-sm lg:text-[15.5px]">
+                  <h1 className=" h-[1rem] md:h-[1.2rem] text-center overflow-hidden leading-2 md:leading-5">{data.title}</h1>
+                  <h1 className="text-gray-400 font-semibold">${data.price}</h1>
+                </div>
+              </div>
+              </Link>
+            </SwiperSlide>
+          ))}
+          
       </Swiper>
 
 

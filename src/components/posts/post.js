@@ -2,8 +2,6 @@ import React from 'react'
 import "./post.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
-import post1 from "../../assets/hero1.jpg"
 import { BsInstagram } from 'react-icons/bs'
 import { Autoplay } from 'swiper/modules';
 
@@ -35,7 +33,7 @@ export default function Post() {
         
         
         breakpoints={{
-          250: {
+          640: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -57,7 +55,7 @@ export default function Post() {
 
         <SwiperSlide>
           <div className='post_box'>
-          <img src={post1} alt="posts" className='post_img'/>
+          <img src='https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557256241-pot-plant-close-up-elevated-view-high-res-stock-photography-829464-001-1557256205.jpg?crop=1.00xw:0.801xh;0,0.103xh&resize=980:*' alt="posts" className='post_img'/>
           <div className='post_overlay'><BsInstagram /></div>
           </div>
           </SwiperSlide>
@@ -65,7 +63,7 @@ export default function Post() {
 
           <SwiperSlide>
           <div className='post_box'>
-          <img src={post1} alt="posts" className='post_img'/>
+          <img src='https://img.freepik.com/premium-photo/green-leaf-background-with-plant-it_791733-352.jpg' alt="posts" className='post_img'/>
           <div className='post_overlay'><BsInstagram /></div>
           </div>
           </SwiperSlide>
@@ -73,7 +71,7 @@ export default function Post() {
 
           <SwiperSlide>
           <div className='post_box'>
-          <img src={post1} alt="posts" className='post_img'/>
+          <img src='https://images.pexels.com/photos/1777813/pexels-photo-1777813.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt="posts" className='post_img'/>
           <div className='post_overlay'><BsInstagram /></div>
           </div>
           </SwiperSlide>
@@ -81,7 +79,7 @@ export default function Post() {
 
           <SwiperSlide>
           <div className='post_box'>
-          <img src={post1} alt="posts" className='post_img'/>
+          <img src='https://img.freepik.com/free-photo/succulent-cactus-plants_658428-38.jpg' alt="posts" className='post_img'/>
           <div className='post_overlay'><BsInstagram /></div>
           </div>
           </SwiperSlide>
@@ -89,10 +87,19 @@ export default function Post() {
 
           <SwiperSlide>
           <div className='post_box'>
-          <img src={post1} alt="posts" className='post_img'/>
+          <img src='https://images.pexels.com/photos/2253844/pexels-photo-2253844.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt="posts" className='post_img'/>
           <div className='post_overlay'><BsInstagram /></div>
           </div>
           </SwiperSlide>
+
+          
+          <SwiperSlide>
+          <div className='post_box'>
+          <img src='https://bouqs.com/product_images/money-tree/Deluxe/613fca39b84ad30098718d88/detail.jpg?c=1631570489' alt="posts" className='post_img'/>
+          <div className='post_overlay'><BsInstagram /></div>
+          </div>
+          </SwiperSlide>
+
 
 
 

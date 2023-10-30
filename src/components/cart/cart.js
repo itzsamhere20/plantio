@@ -78,14 +78,19 @@ console.log('total items:',totalItems)
 
     // --------------------------Empty cart area--------------------------------
 
-    <div className='h-[100vh]  flex flex-col justify-center items-center font-poppins '>
+    <div className='h-[100vh] py-10  flex flex-col justify-center items-center font-poppins  border-b mt-[20px] lg:mt-[100px]'>
       <img src={empty_cart} alt='empty bag' className=''/>
       <div className='text-md w-[75%] text-center py-10 '>
         <h1 className='font-semibold text-xl  lg:text-3xl md:text-2xl  pb-3'>Your cart is empty</h1>
         <p className='font-[500] text-md  md:text-lg lg:text-xl text-gray-600'>looks like you havn't added anything to your cart. Go ahead & explore top categories</p>
       </div>
       
-      <Link to={'/shop'} className="flex font-[500] text-green-800 text-sm md:text-md lg:text-lg mt-10">
+      <Link to={'/shop'}   onClick={() =>  
+                          window.scroll({
+                            top: 0,
+                            left: 0,
+                            behavior: "smooth",
+                          })}  className="flex font-[500] text-green-800 text-sm md:text-md lg:text-lg mt-10">
 
             <svg className="fill-current mr-2 text-green-800 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" /></svg>
              explore products
@@ -94,7 +99,9 @@ console.log('total items:',totalItems)
 
 
 :
-    <div className="w-[100%] px-5 lg:px-10 mt-10">
+
+// ----------------------cart main section--------------------------------------
+    <div className="w-[100%] px-5 md:px-10 lg:px-20 py-10  border-b mt-[20px] lg:mt-[100px] ">
       <div className="flex flex-col lg:flex-row shadow-md rounded-lg lg:rounded-lg my-10 justify-center items-center lg:justify-start lg:items-start">
 
 {/* ----------------------------left-side---------- ---------------- */}

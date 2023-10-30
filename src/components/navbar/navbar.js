@@ -33,7 +33,7 @@ export default function Navbar() {
 
       .then((res) => {
         setProducts(res.data);
-        console.log(products);
+      
       });
   };
   useEffect(() => {

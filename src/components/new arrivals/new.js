@@ -23,7 +23,7 @@ export default function New() {
     fetchData()
 
   },[])
-  console.log('new products are:',products)
+ 
   
   
   
@@ -58,7 +58,7 @@ export default function New() {
 
 
           {products.map((data)=>
-          (  <SwiperSlide>
+          (  <SwiperSlide key={data.id}>
             <Link to={`/shop/${data.category}/${data.id}`}
             onClick={() => {
               window.scroll({

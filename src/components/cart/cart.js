@@ -67,8 +67,8 @@ const handleInc = (id) => {
     navigate('/cart')
    
 }
-console.table(carts)
-console.log('total items:',totalItems)
+
+
   return (
 
 

@@ -32,8 +32,6 @@ export default function Shop() {
           
           
     
-          console.log("products data " + products);
-          console.log("category data" + categories)  
         })
  );
   };
@@ -43,8 +41,6 @@ export default function Shop() {
    
   },[filter]);
 
-  console.log("filter:" + filter);
-  console.log(products);
 
   return (
     <>

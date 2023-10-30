@@ -27,7 +27,7 @@ export default function ProductDetail() {
     "px-4 py-2 text-2xl text-gray-500 hover:text-black font-poppins";
 
   const AddProductToCart = (cartProduct) => {
-    console.log(cartProduct);
+   
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const isProductExist = cart.find((item) => item.id === cartProduct.id);
     if (isProductExist) {
@@ -71,10 +71,9 @@ export default function ProductDetail() {
   useEffect(() => {
     ProductData();
   }, [id]);
-  console.table("product is :", product);
-  console.table("category data  is :", categoryData);
 
-  console.log("product qty is :", qty);
+
+ 
 
   const removeProduct = (id) => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -36,11 +36,13 @@ export default function Navbar() {
       
       });
   };
+  const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
+  const cartitems = JSON.parse(localStorage.getItem("cart"));
   useEffect(() => {
     fetchData();
-  }, []);
-const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
-  const cartitems = JSON.parse(localStorage.getItem("cart"));
+  }, [cartitems]);
+
+
  
 
   // ------------------------checker function-------------------------

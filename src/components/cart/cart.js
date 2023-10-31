@@ -77,7 +77,11 @@ const handleInc = (id) => {
 
 <>
 {
-    !CartChecker?
+    CartChecker?
+    carts.length<1 ?
+
+    
+    
 
     // --------------------------Empty cart area--------------------------------
 
@@ -222,6 +226,34 @@ const handleInc = (id) => {
 
       </div>
     </div>
+    :
+
+    
+    // --------------------------Empty cart area--------------------------------
+
+    <div className='h-max   flex flex-col justify-center items-center font-poppins  border-b mt-[20px] lg:mt-[100px]'>
+      <img src={empty_cart} alt='empty bag' className=''/>
+      <div className='text-md w-[75%] text-center py-10 '>
+        <h1 className='font-semibold text-xl  lg:text-3xl md:text-2xl  pb-3'>Your cart is empty</h1>
+        <p className='font-[500] text-sm  md:text-lg lg:text-xl text-gray-600'>looks like you havn't added anything to your cart. Go ahead & explore top categories</p>
+      </div>
+      
+      <Link to={'/shop'}   onClick={() =>  
+                          window.scroll({
+                            top: 0,
+                            left: 0,
+                            behavior: "smooth",
+                          })}  className="flex font-[500] text-green-800 text-sm md:text-md lg:text-lg mb-10 mt-5">
+
+            <svg className="fill-current mr-2 text-green-800 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" /></svg>
+             explore products
+          </Link>
+    </div>
+
+    
+
+   
+
 }
 
     </>

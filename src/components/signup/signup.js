@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import bg from "../../assets/signupbg.jpg"
-import loginImage from "../../assets/login.jpg"
+
 import signupImage from "../../assets/signup.jpg"
 import {PiEyeLight,PiEyeSlashLight} from"react-icons/pi"
 import {motion} from "framer-motion"
@@ -38,7 +38,7 @@ export default function Signup() {
 
                 <div className=' flex  w-[100%] md:w-[40%] h-[250px] md:h-auto md:flex    md:rounded-l-xl  md:border-[1px] md:border-r-0 overflow-hidden'>
                
-                    <img src={loginImage} alt="flower image" className='flex w-[100%] 
+                    <img src='https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-money_tree.jpg?v=1680542101' alt="flower image" className='flex w-[100%] 
                     h-max md:h-auto
                object-cover bg-gray-100 md:rounded-l-xl  duration-700' style={{marginLeft: window.innerWidth>768? signup?'-100%':'0' : signup?'100%' :'0'}} />
 

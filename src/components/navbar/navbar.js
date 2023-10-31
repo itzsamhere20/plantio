@@ -39,8 +39,9 @@ export default function Navbar() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const cartitems = JSON.parse(localStorage.getItem("cart")).length;
+const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
+  const cartitems = JSON.parse(localStorage.getItem("cart"));
+ 
 
   // ------------------------checker function-------------------------
   const ClickChecker = () => {
@@ -123,7 +124,11 @@ export default function Navbar() {
                     key={data.id}
                     to={`/shop/${data.category}/${data.id}`}
                     className=" flex  items-center"
-                   onClick={()=>{setSearchClick(false);setSearch("")}}>
+                   onClick={()=>{setSearchClick(false);setSearch("");window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                  });}}>
                     <div className=" bg-white p-3 md:p-5 lg:p-7 rounded-md flex flex-col w-[100%] duration-300 hover:-translate-y-1 lg:hover:-translate-y-4 cursor-pointer shadow-md">
                       <img
                         src={data.image}
@@ -145,6 +150,7 @@ export default function Navbar() {
       ) : (
         <div className="hidden"></div>
       )}
+
 
       {/* ----------------------------------mian nav container----------------------------- */}
       <div className="flex top-0 relative md:relative lg:absolute w-[100%] px-4 md:px-12 lg:px-20  2xl:px-60 py-3   justify-between h-[75px]  lg:h-[100px] items-center z-[100] shadow-md lg:shadow-none ">
@@ -268,11 +274,11 @@ export default function Navbar() {
           }}
            className="flex  text-green-900 pr-3 py-3 ">
             <BsBag className="text-2xl" />
-            {cartitems > 0 && (
-              <div className="flex absolute  w-2 h-2 p-2 bg-black rounded-full top-0 right-0 justify-center items-center text-white text-xs">
-                {cartitems}
+          
+              <div className="absolute  w-2 h-2 p-2 bg-black rounded-full top-0 right-0 justify-center items-center text-white text-xs" style={{display:CartChecker? 'flex':'none'}}>
+                {CartChecker?cartitems.length: ''}
               </div>
-            )}
+            
           </Link>
         </motion.div>
 
@@ -289,11 +295,11 @@ export default function Navbar() {
           className="flex lg:hidden  w-[20%] text-green-900 rounded-full  p-3  justify-end "
         >
           <BsBag className="text-2xl  lg:text-4xl" />
-          {cartitems > 0 && (
-            <div className="flex absolute  w-2 h-2 p-2.5  bg-black rounded-full top-3 right-3 justify-center items-center text-white text-xs">
-              {cartitems}
+         
+            <div className=" absolute  w-2 h-2 p-2.5  bg-black rounded-full top-3 right-3 justify-center items-center text-white text-xs" style={{display:CartChecker? "flex" :'none'}}>
+              {CartChecker? cartitems.length : ''}
             </div>
-          )}
+       
         </Link>
 
         {/* --------------------------------Scrolled menu-------------------------------*/}
@@ -389,14 +395,14 @@ export default function Navbar() {
           >
             <div className="flex w-max">
               <BsBag />
-              {cartitems > 0 && (
+              
                 <div
-                  className="flex absolute  w-2 h-2 p-2  rounded-full top-2
+                  className="absolute  w-2 h-2 p-2  rounded-full top-2
          left-[20%]  bg-black justify-center items-center text-white text-xs"
-                >
-                  {cartitems}
+               style={{display:CartChecker? 'flex':'none'}}  >
+                  {CartChecker? cartitems.length :''}
                 </div>
-              )}
+             
             </div>
           </Link>
         ) : (

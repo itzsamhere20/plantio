@@ -236,7 +236,7 @@ export default function ProductDetail() {
                 </div>
                 ) : (
                   // ------------------------------product detail Section start ------------------
-                  <div className="flex w-[100%] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 border-b-[1px] border-gray-200">
+                  <div  key={product.id} className="flex w-[100%] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 border-b-[1px] border-gray-200">
                     {/* -------------------------left-side-------------- */}
 
                     <div className="w-[100%] lg:w-[50%] h-auto bg-white p-5 lg:p-10">
@@ -390,7 +390,7 @@ export default function ProductDetail() {
                     })
                     .map((cat) => {
                       return (
-                        <SwiperSlide>
+                        <SwiperSlide key={cat.id}>
                           <Link
                             onClick={() => {
                               setProduct([""]);

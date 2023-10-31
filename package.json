@@ -1,6 +1,6 @@
 {
   "name": "plantio",
-  "homepage": "/",
+  "homepage": "https://plantiov2.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

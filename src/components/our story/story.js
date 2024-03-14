@@ -39,7 +39,7 @@ export default function Story() {
   window.addEventListener('scroll', height)
   
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-2 w-[100%] h-max px-10 2xl:px-60 py-[70px] gap-10 lg:gap-0'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 w-[100%] h-max px-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] py-[70px] gap-10 lg:gap-0'>
 
 <div className=' flex w-[100%] h-[100%]'>
 <ReactPlayer 

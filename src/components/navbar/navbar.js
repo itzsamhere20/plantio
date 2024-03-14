@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "../../assets/logo.png";
-import { HiOutlineBars3BottomRight } from "react-icons/hi2";
+import { HiOutlineBars3BottomRight,HiOutlineShoppingBag } from "react-icons/hi2";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   AiOutlineClose,
@@ -25,7 +25,7 @@ export default function Navbar() {
 
   
   const linkStyle =
-    "py-2 px-4  font-poppins font-[300] cursor-pointer hover:text-white  hover:rounded-full hover:bg-green-800  duration-300 ";
+    "py-2 px-4  font-poppins lg:text-sm font-[300] cursor-pointer hover:text-white  hover:rounded-full hover:bg-green-800  duration-300 ";
   const linkStyle2 = "flex text-2xl w-[100%] justify-center cursor-pointer hover:text-3xl lg:hover:text-5xl";
   const fetchData = () => {
     axios
@@ -72,14 +72,14 @@ export default function Navbar() {
           animate={{ y: "0%" }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
           exit={{ opacity: 0 }}
-          className="flex flex-col  fixed pt-20  min-h-[100vh] h-[100vh] w-[100%] bg-[#ffffffb9] items-center backdrop-blur z-[999]"
-        >
+          className="flex flex-col  fixed pt-20 top-0 min-h-[100vh] h-[100vh] w-[100%]   bg-[#ffffffb9] items-center backdrop-blur z-[101] 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]" 
+         >
           <div className="flex w-[100%] justify-between items-center px-5 py-1">
             <p className="font-libre text-xl lg:text-3xl ">
               What are you looking for?{" "}
             </p>
             <div
-              className="flex group w-max font-poppins text-sm gap-1 lg:gap-2 items-center cursor-pointer "
+              className="flex group w-max font-poppins text-sm gap-1 lg:gap-2 items-center cursor-pointer  2xl:text-xl"
               onClick={() => {
                 setSearchClick(false);
                 setSearch("");
@@ -155,7 +155,7 @@ export default function Navbar() {
 
 
       {/* ----------------------------------mian nav container----------------------------- */}
-      <div className="flex top-0 relative md:relative lg:absolute w-[100%] px-4 md:px-12 lg:px-20  2xl:px-60 py-3   justify-between h-[75px]  lg:h-[100px] items-center z-[100] shadow-md lg:shadow-none ">
+      <div className="flex top-0 relative md:relative lg:absolute w-[100%] px-4 md:px-12 lg:px-20  2xl:px-[11%] fhd:px-[16%] 4k:px-[26%] py-3   justify-between h-[75px]  lg:h-[80px] items-center z-[100] shadow-md lg:shadow-sm  ">
         {/* -----------------------------------------hamburber menu for mobile--------------------------    */}
         <motion.div
           initial={{ x: "-100%" }}
@@ -230,12 +230,12 @@ export default function Navbar() {
           animate={{ x: "0%" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           exit={{ opacity: 0 }}
-          className="hidden  w-[20%] lg:flex  gap-5 items-center   text-white text-xl justify-end "
+          className="hidden  w-[20%] lg:flex  gap-5 items-center   text-white text-lg justify-end "
         >
           {/* --------------------------------------Search icon -------------------------    */}
           <div className="flex  text-green-900 w-max ">
             <AiOutlineSearch
-              className="text-2xl cursor-pointer"
+              className="text-lg cursor-pointer"
               onClick={() => setSearchClick(true)}
             />
           </div>
@@ -250,7 +250,7 @@ export default function Navbar() {
             });
           }}
            className="flex  text-green-900  ">
-            <AiOutlineUser className="text-2xl" />
+            <AiOutlineUser className="text-lg" />
           </Link>
           {/* ---------------------------------------------admin icon -----------------------------  
           <Link to="/admin"
@@ -275,7 +275,7 @@ export default function Navbar() {
             });
           }}
            className="flex  text-green-900 pr-3 py-3 ">
-            <BsBag className="text-2xl" />
+            <HiOutlineShoppingBag className="text-lg" />
           
               <div className="absolute  w-2 h-2 p-2 bg-black rounded-full top-0 right-0 justify-center items-center text-white text-xs" style={{display:CartChecker? 'flex':'none'}}>
                 {CartChecker?cartitems.length: ''}
@@ -294,21 +294,21 @@ export default function Navbar() {
               behavior: "smooth",
             });
           }}
-          className="flex lg:hidden  w-[20%] text-green-900 rounded-full  p-3  justify-end "
+        className="flex lg:hidden  w-[20%] text-green-900 rounded-full  p-3  justify-end "
         >
-          <BsBag className="text-2xl  lg:text-4xl" />
+          <HiOutlineShoppingBag className="text-2xl  lg:text-4xl" />
          
-            <div className=" absolute  w-2 h-2 p-2.5  bg-black rounded-full top-3 right-3 justify-center items-center text-white text-xs" style={{display:CartChecker? "flex" :'none'}}>
+            <div className=" absolute  w-2 h-2 p-2.5  bg-black rounded-full top-3 right-[3%] md:right-[5%] lg:right-[3%] justify-center items-center text-white text-xs" style={{display:CartChecker? "flex" :'none'}}>
               {CartChecker? cartitems.length : ''}
             </div>
        
         </Link>
 
-        {/* --------------------------------Scrolled menu-------------------------------*/}
+        {/* --------------------------------Scrolled  nav menu-------------------------------*/}
 
-        <div className="z-50 fixed flex-col " onClick={ClickChecker}>
+        <div className="z-[9999] fixed flex-col " onClick={ClickChecker}>
           <div
-            className="flex fixed right-5  w-[50px] h-[50px] bg-green-700 rounded-[100%] text-white text-xl justify-center items-center z-50  linear duration-300 "
+            className="flex fixed right-5 2xl:right-[5%] fhd:right-[7.5%]  4k:right-[12.5%]  w-[50px] h-[50px] bg-green-700 rounded-[100%] text-white text-xl justify-center items-center  linear duration-300  z-[9999]"
             style={{
               top: scrolled ? "40px" : "-100px",
               rotate: clicked ? "90deg" : "0deg",
@@ -325,12 +325,8 @@ export default function Navbar() {
             }}
           >
             <ul
-              className=" flex font-libre uppercase h-[80%] text-green-800 flex-col  justify-center items-center bg-[#ffffffb6] overflow-hidden  backdrop-blur  py-10 px-4 gap-10 linear duration-500 border-b-4 border-green-900"
-              style={{
-                width: clicked ? "70vw" : "80vw",
-                color: clicked ? "rgb(22 101 52 )" : "white",
-               
-              }}
+              className=" flex w-[90%] lg:w-[80%] 2xl:w-[70%] fhd:w-[60%] 4k:w-[40%] font-libre uppercase h-[100%] text-green-800 flex-col  justify-center items-center bg-[rgba(255,255,255,0.79)] overflow-hidden  backdrop-blur  py-10 px-4 gap-10 linear duration-500  2xl:mx-[15%] fhd:mx-[20%] 4k:mx-[30%]"
+              
             >
               <Link to="/"
                onClick={() => {
@@ -396,7 +392,7 @@ export default function Navbar() {
           }}
           >
             <div className="flex w-max">
-              <BsBag />
+              <HiOutlineShoppingBag />
               
                 <div
                   className="absolute  w-2 h-2 p-2  rounded-full top-2

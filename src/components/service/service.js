@@ -15,7 +15,7 @@ export default function Service() {
     // -------------------------------services main container---------------------
     <div
       id="services"
-      className="grid grid-cols-1 md:grid-cols-3 items-center w-[100%] px-5 md:px-10 lg:px-20 2xl:px-60 h-auto pt-[70px] gap-2 md:gap-5 lg:gap-10 pb-[50px] "
+      className="grid grid-cols-1 md:grid-cols-3 items-center w-[100%] px-5 md:px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]  h-auto pt-[70px] gap-2 md:gap-5 lg:gap-10 pb-[50px] "
     >
       {/* ----------------------------1st service---------------------------- */}
 

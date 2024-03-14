@@ -10,7 +10,7 @@ export default function Post() {
   const post_img="flex w-[100%] h-[100%] object-cover hover:scale-100";*/
   return (
 
-    <div className='flex flex-col w-[100%] h-max px-10 2xl:px-60 justify-center items-center pt-[70px] pb-[50px]  border-b-[1.5px]'>
+    <div className='flex flex-col w-[100%] h-max px-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] justify-center items-center pt-[70px] pb-[50px]  border-b-[1.5px]'>
       
 
       <h1 className='flex font-libre text-2xl lg:text-3xl w-[100%] justify-center pb-3 lg:pb-4'>#bring<i className='text-green-800'>lifein</i></h1>

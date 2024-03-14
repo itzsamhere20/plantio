@@ -9,7 +9,7 @@ export default function Contact() {
     <div className="flex  flex-col w-[100%]  border-b ">
 
       {/* -----------------------------image heading-area--------------------- */}
-      <div className="flex mt-[20px] lg:mt-[100px] justify-center items-center px-5 lg:px-20">
+      <div className="flex mt-[20px] lg:mt-[100px] justify-center items-center px-5 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
         <img
           src={contactImg}
           alt="phone and plants on the table"
@@ -25,7 +25,7 @@ export default function Contact() {
 
       {/* --------------------------Contact section----------------- */}
 
-      <div className="flex w-[100%] flex-col md:flex-row py-10 lg:py-20 gap-2 md:gap-5 lg:gap-10 px-5 lg:px-20">
+      <div className="flex w-[100%] flex-col md:flex-row py-10 lg:py-20 gap-2 md:gap-5 lg:gap-10 px-5 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
         {/* -------------------------------left side----------------- */}
 
         <div className="flx flex-col w-[100%] md:w-[40%] lg:w-[30%]">
@@ -116,7 +116,7 @@ export default function Contact() {
 
 {/* -----------------------------form section------------------------ */}
 
-        <div className="flex flex-col w-[100%] bg-gray-100 py-20 px-5">
+        <div className="flex flex-col w-[100%] 2xl:w-auto bg-gray-100 py-20 px-5 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%]">
           <div className="flex flex-col items-center gap-1 lg:gap-3">
             <h1 className="text-2xl lg:text-4xl font-libre capitalize ">Send us your <i>Questions</i></h1>
             <p className="text-xs lg:text-base text-gray-500 font-poppins ">We'll get back to you within two days.</p>

@@ -8,12 +8,18 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+   
     extend: {
       fontFamily: {
         
         'libre': ['Libre Baskerville', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         
+    },
+    screens: {
+      
+      'fhd': '1920px',
+      '4k':'3840px'
     },
   }
     

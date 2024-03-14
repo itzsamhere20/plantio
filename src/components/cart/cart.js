@@ -4,31 +4,29 @@ import empty_cart from "../../assets/cart-empty.png"
 
 
 export default function Cart() {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
-const [total, setTotal] = useState(0)
-const [totalItems, setTotalItems] = useState(0)
-const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
-const carts=JSON.parse(localStorage.getItem("cart"))
- 
-
-  useEffect(() => {
-    
-      const total =carts!==null? carts.reduce((add, item) => {
-      return add + (item.price * item.quantity)
-     
-    }, 0) :''
-
-    const totalItems = CartChecker? carts.reduce((sum, item) => {
-      return sum + (item.quantity)
-     
-    }, 0) :
-     CartChecker?setTotal(total):setTotal(0)
-    
-    setTotalItems(totalItems)
-    
-
-  }, [carts])
+  const [total, setTotal] = useState(0)
+  const [totalItems, setTotalItems] = useState(0)
+  const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
+  const carts=JSON.parse(localStorage.getItem("cart"))
+   
+  
+    useEffect(() => {
+      
+        const total =carts!==null? carts.reduce((add, item) => {
+        return add + (item.price * item.quantity)
+       
+      }, 0) :''
+     const totalItems = CartChecker? carts.reduce((sum, item) => {
+        return sum + (item.quantity)
+         
+      }, 0) :''
+      setTotal(total)
+      setTotalItems(totalItems)
+      
+  
+    }, [carts])
 
 //  ---------------------Increment function -------------------------- 
  
@@ -85,7 +83,7 @@ const handleInc = (id) => {
 
     // --------------------------Empty cart area--------------------------------
 
-    <div className='h-max   flex flex-col justify-center items-center font-poppins  border-b mt-[20px] lg:mt-[100px]'>
+    <div className='h-max min-h-[80vh]  flex flex-col justify-center items-center font-poppins  border-b mt-[20px] lg:mt-[100px] 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]'>
       <img src={empty_cart} alt='empty bag' className=''/>
       <div className='text-md w-[75%] text-center py-10 '>
         <h1 className='font-semibold text-xl  lg:text-3xl md:text-2xl  pb-3'>Your cart is empty</h1>
@@ -108,7 +106,7 @@ const handleInc = (id) => {
 :
 
 // ----------------------cart main section--------------------------------------
-    <div className="w-[100%] px-5 md:px-10 lg:px-20 py-5  border-b mt-[20px] lg:mt-[100px] ">
+    <div className="w-[100%] min-h-[75vh]  px-5 md:px-10 lg:px-20 py-5  border-b mt-[0px] lg:mt-[80px] 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
       <div className="flex flex-col lg:flex-row shadow-md rounded-lg lg:rounded-lg my-10 justify-center items-center lg:justify-start lg:items-start">
 
 {/* ----------------------------left-side---------- ---------------- */}
@@ -197,7 +195,7 @@ const handleInc = (id) => {
 
 {/* ------------------------right-side----------------------------- */}
         
-        <div id="summary" className=" lg:flex bg-slate-50 rounded-t-[30px] rounded-b-lg lg:rounded-none lg:bg-white lg:flex-col   w-[100%] lg:w-[25%] px-8 py-10 ">
+<div id="summary" className=" lg:flex bg-slate-50 rounded-t-[30px] rounded-b-lg lg:rounded-none lg:bg-white lg:flex-col   w-[100%] lg:w-[25%] px-8 py-10 ">
           <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
           <div className="flex justify-between mt-10 mb-5 px-3 ">
             <span className="font-semibold text-sm uppercase">Items {totalItems}</span>

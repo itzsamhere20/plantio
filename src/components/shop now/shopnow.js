@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function ShopNow() {
   return (
-    <div className="grid grid-cols-1 w-[100%] h-max  md:grid-cols-2  2xl:px-60">
+    <div className="grid grid-cols-1 w-[100%] h-max  md:grid-cols-2  2xl:px-[10%] 
+    fhd:px-[15%] 4k:px-[25%]">
       {/* ----------------------left-side----------------------------- */}
       <div className="flex flex-col w-[100%] h-[100%] justify-center  items-center md:items-start text-center md:text-left px-[10%] py-[10%] bg-gray-100">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-gray-800 md:text-black font-libre leading-8 md:leading-10 lg:leading-[50px]">

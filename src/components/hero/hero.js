@@ -12,18 +12,18 @@ import { Autoplay, EffectCreative } from "swiper/modules";
 import { Link } from "react-router-dom";
 export default function Hero() {
   const hero_h1 =
-    "text-[1.3rem] md:text-4xl lg:text-6xl w-[80%] text-left font-libre leading-[30px]";
+    "text-[1.3rem] md:text-4xl lg:text-5xl w-[80%] text-left font-libre leading-[30px]";
   const hero_heading =
-    "flex flex-col lg:gap-2 w-[100%] h-[100%] px-4 md:px-24 lg:px-32 2xl:px-52 justify-center  text-green-800";
+    "flex flex-col lg:gap-2 w-[100%] h-[100%] px-4 md:px-24 lg:px-32 2xl:px-12 justify-center  text-green-800";
   const hero_paragraph =
-    " w-auto hidden md:flex font-poppins font-200 text-gray-900 pr-[45%] py-6 text-[10px] md:text-[14px] 2xl:leading-[33px] 2xl:text-[20px]";
+    " w-auto hidden md:flex font-poppins font-200 text-gray-900 pr-[45%] 2xl:pr-[55%] fhd:pr-[50%] py-6 text-[10px] md:text-[14px] 2xl:leading-[33px] 2xl:text-[16px]";
   const hero_button =
     "flex w-max px-5 md:px-6 py-3 2xl:py-4 2xl:px-8 border-[1px] md:border-[2px] border-green-900 uppercase font-poppins font-[500] mt-[30px] md:mt-0 tracking-widest text-[12px] md:text-[14px] 2xl:text-[18px] hover:bg-green-950 hover:text-white";
   const hero_img =
-    "flex absolute w-[50%]  h-[100%] ml-[50%] 2xl:ml-[55%]  object-contain z-[11]";
+    "flex absolute w-[50%]  h-[100%] ml-[50%] 2xl:ml-[53%]  object-contain z-[11]";
 
   return (
-    <div className="flex w-[100%] h-[400px] md:h-[450px] lg:h-[600px] justify-center items-center">
+    <div className="flex w-[100%] 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]  h-[400px] md:h-[450px] lg:h-[600px] justify-center items-center  lg:mt-[80px]">
       <Swiper
         slidesPerView={1}
         spaceBetween={-10}

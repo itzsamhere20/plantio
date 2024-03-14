@@ -13,6 +13,7 @@ import AboutUs from "./components/about us/AboutUs";
 import Faq from "./components/faqs/faq";
 import Contact from "./components/contact/contact";
 import NotFound from "./components/404/404";
+import AdminPanel from "../src/components/admin/AdminPanel"
 
 function App() {
   
@@ -22,18 +23,19 @@ function App() {
       
       <BrowserRouter>
       <Navbar/>
-        <Routes onUpdate={() => window.scrollTo(0, 0)}>
+        <Routes>
           <Route path="/" Component={Home} />
        
         
           <Route exact path="/sign-up" Component={Signup} />
-          <Route exact onUpdate={() => window.scrollTo(0, 0)} path="/shop" Component={Shop} />
+          <Route exact path="/shop" Component={Shop} />
           <Route path="/shop/:category/:id" Component={ProductDetail} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about-us" Component={AboutUs} />
           <Route path="/contact" Component={Contact} />
           <Route path="/faqs" Component={Faq} />
           <Route path="*" Component={NotFound} />
+          <Route path="admin" Component={AdminPanel} />
 
         </Routes>
         <Footer />

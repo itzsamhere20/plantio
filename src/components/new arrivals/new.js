@@ -29,7 +29,7 @@ export default function New() {
   
   
   return (
-    <div className='flex flex-col w-[100%] h-max px-5 md-px-10 lg:px-20 2xl:px-60 py-[70px] justify-center items-center'>
+    <div className='flex flex-col w-[100%] h-max px-5 md-px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] py-[70px] justify-center items-center'>
       <h1 className='font-libre gap-5 text-2xl md:text-3xl capitalize mb-10 text-gray-800'>new <i className='text-green-800'>Arrivals </i></h1>
 
 <Swiper

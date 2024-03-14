@@ -104,7 +104,7 @@ export default function ProductDetail() {
              <></>
           )}
           {/* ----------------------Skeleton area---------------------------- */}
-          <div className="flex w-[100%]  mt-[20px] lg:[120px] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32">
+          <div className="flex w-[100%]  mt-[20px] lg:[120px] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
             {/* -------------------------left-side-------------- */}
 
             <div className="w-[100%] lg:w-[50%] h-auto bg-white p-5 lg:p-10">
@@ -119,7 +119,7 @@ export default function ProductDetail() {
                 <Skeleton className="w-[50px]" />
               </div>
 
-              <div className=" flex flex-col font-poppins py-5 lg:py-10">
+              <div className=" flex flex-col py-5 lg:py-10">
                 <Skeleton className="h-[170px]" />
               </div>
               <Skeleton className=" w-[100%] h-[30px]" />
@@ -134,7 +134,7 @@ export default function ProductDetail() {
             <>
               {/* -----------------------------------Modal area---------------------------------- */}
               <div className="justify-center items-center flex fixed inset-0 z-50 ">
-                <div className="relative my-6 mx-auto w-[90%]">
+                <div className="relative my-6 mx-auto w-[90%] 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     {/*header*/}
@@ -211,7 +211,7 @@ export default function ProductDetail() {
                 {/* ------------------------------loading-area----------------    */}
 
                 {loading ? (
-                  <div className="flex w-[100%]  mt-[20px] lg:[120px] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32">
+                  <div className="flex w-[100%]  mt-[20px] lg:[120px] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
                   {/* -------------------------left-side-------------- */}
       
                   <div className="w-[100%] lg:w-[50%] h-auto bg-white p-5 lg:p-10">
@@ -236,14 +236,14 @@ export default function ProductDetail() {
                 </div>
                 ) : (
                   // ------------------------------product detail Section start ------------------
-                  <div  key={product.id} className="flex w-[100%] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 border-b-[1px] border-gray-200">
+                  <div  key={product.id} className="flex w-[100%] flex-col lg:flex-row h-auto py-10 lg:py-10 px-5 md:px-10 lg:px-32 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] border-b-[1px] border-gray-200">
                     {/* -------------------------left-side-------------- */}
 
                     <div className="w-[100%] lg:w-[50%] h-auto bg-white p-5 lg:p-10">
                       <img
                         src={product.image}
                         alt="product image"
-                        className="w-[100%] h-[300px] md:h-[400px] lg:h-[600px] object-contain overflow-hidden"
+                        className="w-[100%] h-[300px] md:h-[400px] lg:h-[550px] object-contain overflow-hidden"
                       />
                     </div>
 
@@ -359,7 +359,7 @@ export default function ProductDetail() {
                 )}
 
                 {/* --------------------------more products area----------------------- */}
-                <div className="flex text-2xl lg:text-3xl text-gray-700 w-[100%] font-libre justify-center items-center py-16">
+                <div className="flex text-2xl lg:text-3xl text-gray-700 w-[100%] font-libre justify-center items-center py-16  ">
                   Related&nbsp; <i className="text-green-800">products</i>
                 </div>
 
@@ -382,7 +382,7 @@ export default function ProductDetail() {
                     },
                   }}
                   modules={[Pagination]}
-                  className="w-[90%] mx-[5%] px-10    h-[300px] md:h-[350px] lg:h-[450px] flex mb-10"
+                  className="w-[90%] 2xl:w-[80%] fhd:w-[70%] 4k:w-[50%] mx-[5%] px-10 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%]   h-[300px] md:h-[350px] lg:h-[450px] flex mb-10"
                 >
                   {categoryData
                     .filter((item) => {

@@ -51,7 +51,7 @@ export default function Shop() {
 
 {/* ----------------------------main shop section--------------------------- */}
 
-      <div className=" flex flex-col  gap-5 lg:gap-10   mt-[20px] lg:mt-[100px]  w-[100%] px-5 lg:px-20 2xl:px-60">
+      <div className=" flex flex-col  gap-5 lg:gap-10   mt-[20px] lg:mt-[100px]  w-[100%] px-5 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
     {/* --------------------------------shop top-image ------------------------------- */}
         <img
           src="https://images.pexels.com/photos/2239676/pexels-photo-2239676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -69,7 +69,7 @@ export default function Shop() {
             animate={{ y: "0%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             exit={{ opacity: 0 }}
-            className="gap-2 lg:gap-4 hidden md:flex flex-wrap w-[80%] lg:w-[60%] h-max"
+            className="gap-2 lg:gap-4 hidden md:flex flex-wrap w-[80%] lg:w-[60%] h-max  "
           >
             <p className={filter_btn} onClick={() => {setFilter("/");setLoading(true)}}>
               All
@@ -119,7 +119,7 @@ export default function Shop() {
           </div>
 {/* -------------------------------------search bar area------------------------- */}
 
-          <div className="max-w-md w-max md:w-[20%] lg:w-[40%]  ">
+          <div className="max-w-md w-max md:w-[20%] lg:w-[40%]">
             <div className="relative flex items-center w-full h-12 rounded-md 
             shadow-sm focus-within:shadow-lg bg-white overflow-hidden">
               <div className="grid place-items-center h-full w-12 text-gray-400">
@@ -156,7 +156,7 @@ export default function Shop() {
         loading ? (
          <div
            
-            className="  grid  bg-gray-50 lg:bg-gray-100 grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-[100%] px-5 lg:px-20 2xl:px-60 gap-3 lg:gap-5 h-max pt-20 pb-10  lg:pb-20 mt-5 border-b"
+            className="  grid  bg-gray-50 lg:bg-gray-100 grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-[100%] 2xl:w-[80%] fhd:w-[70%] 4k:w-[50%] px-5 lg:px-20 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%] gap-3 lg:gap-5 h-max pt-20 pb-10  lg:pb-20 mt-5 border-b"
           >
             {loadingArray.map(() => {
                 return (
@@ -179,12 +179,13 @@ export default function Shop() {
               })}
           </div>
         ) : (
-          // -------------------------------------------shop  Section--------------------- 
+          // ----------------------------------shop  Section--------------------- 
           <div
            
-            className="  grid  bg-gray-50 lg:bg-gray-100 grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-[100%] px-5 lg:px-20 2xl:px-60 gap-3 lg:gap-5 h-max pt-20 pb-10  lg:pb-20 mt-5 border-b"
+            className="  grid  bg-gray-50 lg:bg-gray-100 grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-[100%] 2xl:w-[80%] fhd:w-[70%] 4k:w-[50%] px-5 lg:px-20 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%] gap-3 lg:gap-5 h-max pt-20 pb-10  lg:pb-20 mt-5 border-b"
           >
-            {products
+            { 
+            products
               .filter((data) => {
                 return search.toLowerCase() === ""
                   ? data

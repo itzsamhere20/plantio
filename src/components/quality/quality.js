@@ -10,7 +10,8 @@ export default function Quality() {
   return (
 
 
-    <div className='grid grid-cols-1 md:grid-cols-3 py-[50px] 2xl:px-60  w-[100%] h-max bg-gray-100 justify-center items-center '>
+    <div className='grid grid-cols-1 md:grid-cols-3 py-[50px] 2xl:mx-[10%]
+    fhd:mx-[15%] 4k:mx-[25%] w-[100%] 2xl:w-[80%] fhd:w-[70%] 4k:w-[50%] h-max bg-gray-100 justify-center items-center '>
 
 
 

@@ -18,7 +18,7 @@
 }
 ::placeholder
 {
-  font-family: 'poppins';
+  font-family: 'poppins',sans-serif;
   font-size: 14px;
 }
 #signup-form::placeholder
@@ -124,14 +124,21 @@ input[type=number] {
   {
     
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
+  }
+  #search::placeholder
+  {
+    font-size: 16px;
+    color: rgba(128, 128, 128, 0.84);
+    font-weight: 400;
+    font-family: 'poppins',sans-serif;
   }
 
   #signup-form::placeholder
 {
   
  
-  font-size: 16px;
+  font-size: 13px;
   
 
 }
@@ -140,17 +147,49 @@ input[type=number] {
 }
 @media only screen and (min-width:1500px)
 {
+ 
+
+  #signup-form::placeholder
+{
+  
+  font-size: 15px;
+
+}
+
+
+}
+@media only screen and (min-width:1980px)
+{
   ::placeholder
   {
    
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 400;
+  }
+  #search::placeholder
+  {
+    font-size: 18px;
+    color: rgba(128, 128, 128, 0.931);
+  
   }
 
   #signup-form::placeholder
 {
   
-  font-size: 30px;
+  font-size: 20px;
+
+}
+
+
+}
+@media only screen and (min-width:3840px)
+{
+  
+
+  #signup-form::placeholder
+{
+  
+  font-size: 25px;
 
 }
 

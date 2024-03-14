@@ -15,7 +15,7 @@ const footer_social="flex  justify-center items-center text-gray-800  text-[16px
     <div className='flex flex-col pb-[60px] border-b lg:pb-0'>
 {/* -------------------------footer section---------------------- */}
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[100%] h-max  py-[50px] px-5 md:px-10 lg:px-20 2xl:px-60 gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[100%] h-max  py-[50px] px-5 md:px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] gap-10'>
 
 {/* ----------------------company area------------------------ */}
 
@@ -178,7 +178,7 @@ const footer_social="flex  justify-center items-center text-gray-800  text-[16px
 {/* ----------------------copyright & terms area------------------------ */}
 
 
-      <div className='flex  flex-col md:flex-row md:text-left w-[100%] h-max font-poppins text-gray-400 gap-2 py-3 md:py-5 border-t-[1px] px-5 md:px-10 lg:px-20 2xl:px-60 justify-between ease-in-out duration-300'>
+      <div className='flex  flex-col md:flex-row md:text-left w-[100%] h-max font-poppins text-gray-400 gap-2 py-3 md:py-5 border-t-[1px] px-5 md:px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] justify-between ease-in-out duration-300'>
 
 {/* ------------copyight-------- */}
         <h1 className='text-[12px] md:text-sm flex w-[100%] md:w-max justify-center'>©{new Date().getFullYear()} Plantio Store</h1>

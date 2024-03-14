@@ -23,7 +23,7 @@ export default function AboutUs() {
       {/* -----------about us heading----------------- */}
 
       <div
-        className="flex  h-[250px] md:h-[300px] lg:h-[400px] justify-center items-center  font-libre text-5xl text-green-950  mt-[20px] lg:mt-[100px] mx-5 lg:mx-20"
+        className="flex  h-[250px] md:h-[300px] lg:h-[400px] justify-center items-center  font-libre text-5xl text-green-950  mt-[20px] lg:mt-[100px] mx-5 lg:px-20 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%]"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
@@ -35,7 +35,7 @@ export default function AboutUs() {
 
       {/* ------------------------plant img---------------------------- */}
 
-      <div className="flex w-[100%] px-5 mt-10 md:px-10 lg:px-20">
+      <div className="flex w-[100%] px-5 mt-10 md:px-10 lg:px-20 ">
         <img
           src={aboutImg}
           alt="plant in pot"
@@ -45,15 +45,15 @@ export default function AboutUs() {
 
       {/* --------------------------heading section --------------- */}
 
-      <div className="flex flex-col w-[100%] py-5 lg:py-10 ">
+      <div className="flex flex-col w-[100%] py-5 lg:py-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] ">
         <p className="uppercase font-poppins text-xs lg:text-base tracking-[1px]  text-slate-700 text-center">
           FLACIO PHOTOSYNTHESIS STORIES
         </p>
-        <h1 className="font-libre  text-2xl md:text-4xl lg:text-[50px] text-gray-800 text-center px-5 md:px-32 py-3 lg:py-4 leading-normal md:leading-[45px] lg:leading-[55px]">
+        <h1 className="font-libre  text-2xl md:text-4xl lg:text-[50px] text-gray-800 text-center px-5 md:px-32 2xl:px-[10%] fhd:px-[15%] 4k:px-[20%] py-3 lg:py-4 leading-normal md:leading-[45px] lg:leading-[55px]">
           We connect buyers and sellers with suitable, eco-friendly{"  "}
           <i>products</i>
         </h1>
-        <p className=" w-[100%] px-5 md:px-[15%] flex text-center leading-relaxed tracking-[0.5px]  text-xs lg:text-sm text-slate-500 font-poppins">
+        <p className=" w-[100%] px-5 md:px-[15%] 4k:px-[23%] flex text-center leading-relaxed tracking-[0.5px]  text-xs lg:text-sm text-slate-500 font-poppins">
           Nothing adds more beauty and comfort to our homes and offices than the
           lush flowers and foliage of indoor plants. Bedrooms, bathrooms,
           kitchens, cubicles… There really isn’t a space a houseplant can’t
@@ -65,7 +65,7 @@ export default function AboutUs() {
       {/* ----------------------------------3 imgs area------------------------- */}
 
 
-      <div className="grid grid-cols-1 md:grid-cols-3 w-[100%] py-10  gap-5 lg:gap-10 px-5 md:px-10 lg:px-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 w-[100%] py-10  gap-5 lg:gap-10 px-5 md:px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] ">
         {/* ------------img no 1----------------- */}
         <img src="https://images.pexels.com/photos/8989514/pexels-photo-8989514.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="plant image" className=" block w-[100%] h-[500px] md:h-[350px] lg:h-[450px] object-cover duration-100  hover:animate-shake" />
       
@@ -80,7 +80,7 @@ export default function AboutUs() {
 
       {/* ----------------------hows it work area --------------- */}
 
-      <div className="w-[100%] flex flex-col bg-pink-50 items-center  py-20 md:py-16 lg:py-24 md:px-[5%] lg:px-[10%] ">
+      <div className="w-[100%] 2xl:w-[80%] fhd:w-[70%] 4k:w-[50%] flex flex-col bg-pink-50 items-center  py-20 md:py-16 lg:py-24 md:px-[5%] lg:px-[10%] 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%] ">
         <h1 className="flex  text-2xl lg:text-4xl font-libre text-gray-800 mb-16 md:mb-16 lg:mb-24 gap-[6px] lg:gap-[8px] flex-wrap capitalize">
           Here's how it <i className="text-green-800">works</i>
         </h1>
@@ -94,7 +94,7 @@ export default function AboutUs() {
           <img
             src={arrow}
             alt="arrow"
-            className="hidden md:flex opacity-[0.1] absolute md:w-[150px] lg:w-[200px] md:left-[26.5%] lg:left-[28%] md:mt-5 lg:mt-0 select-none "
+            className="hidden md:flex opacity-[0.1] absolute md:w-[150px] lg:w-[200px] md:left-[26.5%] lg:left-[28%] 2xl:left-[34%] fhd:left-[38%] 4k:left-[42.5%] md:mt-5 lg:mt-0  select-none "
           />
 
           <div className={work_box}>
@@ -105,7 +105,7 @@ export default function AboutUs() {
           <img
             src={arrow}
             alt="arrow"
-            className=" hidden md:flex opacity-[0.1] absolute md:w-[150px] lg:w-[200px] md:left-[57.5%] lg:left-[57%] md:-mt-16  lg:-mt-20 rotate-180 -scale-x-[1]"
+            className=" hidden md:flex opacity-[0.1] absolute md:w-[150px] lg:w-[200px] md:left-[57.5%] lg:left-[57%] 2xl:left-[55.5%] fhd:left-[55%] 4k:left-[53%] md:-mt-16  lg:-mt-20 rotate-180 -scale-x-[1]"
           />
 
           <div className={work_box}>
@@ -131,7 +131,7 @@ export default function AboutUs() {
         className="my-10">
 
           {/* -----------------------------------slide 1--------------------------- */}
-          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10">
+          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
             {/* ----------------------stars area---------------------- */}
 
             <div className="flex  gap-2 text-green-900 text-sm  items-center w-[100%] justify-center">
@@ -143,8 +143,8 @@ export default function AboutUs() {
             </div>
             {/* ---------------------------message area--------------------- */}
             <p
-              className=" flex text-lg md:text-2xl lg:text-3xl 
-   opacity-[0.8] font-libre px-[10%] md:px-[15%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
+              className=" flex text-lg md:text-2xl lg:text-3xl justify-center
+   opacity-[0.8] font-libre px-[10%] md:px-[15%] fhd:px-[20%] 4k:px-[25%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
             >
               "Green thumb, black thumb, doesn't matter thanks to Modern
               Sprout!"
@@ -165,7 +165,7 @@ export default function AboutUs() {
           </SwiperSlide>
 
           {/* -----------------------------------slide 2--------------------------- */}
-          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10">
+          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
             {/* ----------------------stars area---------------------- */}
 
             <div className="flex  gap-2 text-green-900 text-sm  items-center w-[100%] justify-center">
@@ -177,8 +177,8 @@ export default function AboutUs() {
             </div>
             {/* ---------------------------message area--------------------- */}
             <p
-             className=" flex text-lg md:text-2xl lg:text-3xl 
-             opacity-[0.8] font-libre px-[10%] md:px-[15%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
+             className=" flex text-lg md:text-2xl lg:text-3xl  justify-center
+             opacity-[0.8] font-libre px-[10%] md:px-[15%] fhd:px-[20%] 4k:px-[25%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
             >
               "Very happy with Plantio, plants arrived in excellent condition, were healthy looking with lot of growth and theriving!"
             </p>
@@ -198,7 +198,7 @@ export default function AboutUs() {
           </SwiperSlide>
 
           {/* -----------------------------------slide 3--------------------------- */}
-          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10">
+          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
             {/* ----------------------stars area---------------------- */}
 
             <div className="flex  gap-2 text-green-900 text-sm  items-center w-[100%] justify-center">
@@ -211,8 +211,8 @@ export default function AboutUs() {
             </div>
             {/* ---------------------------message area--------------------- */}
             <p
-              className=" flex text-lg md:text-2xl lg:text-3xl 
-              opacity-[0.8] font-libre px-[10%] md:px-[15%] text-center italic py-5 lg:py-10 lead md:leading-normaliing-normal tracking-[0.4px]"
+               className=" flex justify-center text-lg md:text-2xl lg:text-3xl 
+               opacity-[0.8] font-libre px-[10%] md:px-[15%] fhd:px-[20%] 4k:px-[25%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
             >
               "Green thumb, black thumb, doesn't matter thanks to Modern
               Sprout!"
@@ -233,7 +233,7 @@ export default function AboutUs() {
           </SwiperSlide>
 
           {/* -----------------------------------slide 4--------------------------- */}
-          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10">
+          <SwiperSlide className="flex flex-col w-[100%] py-5 lg:py-10 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%]">
             {/* ----------------------stars area---------------------- */}
 
             <div className="flex  gap-2 text-green-900 text-sm  items-center w-[100%] justify-center">
@@ -246,8 +246,8 @@ export default function AboutUs() {
             </div>
             {/* ---------------------------message area--------------------- */}
             <p
-              className=" flex text-lg md:text-2xl lg:text-3xl 
-   opacity-[0.8] font-libre px-[10%] md:px-[15%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
+              className=" flex justify-center text-lg md:text-2xl lg:text-3xl 
+   opacity-[0.8] font-libre px-[10%] md:px-[15%] fhd:px-[20%] 4k:px-[25%] text-center italic py-5 lg:py-10 leading-relaxed md:leading-normal tracking-[0.4px]"
             >
               "Very happy with Plantio, plants arrived in excellent condition, were healthy looking with lot of growth and theriving!"
             </p>

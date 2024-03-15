@@ -25,7 +25,7 @@ export default function Signup() {
     initial={{ x: '-100%' }}
     animate={{ x: '0%' }}
     transition={{ duration: 0.1, ease: 'easeIn' }}
-    exit={{ opacity: 0 }} className='flex   py-10  lg:mt-[80px] items-center  justify-center 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%] min-h-[80vh]   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 140%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
+    exit={{ opacity: 0 }} className='flex   py-10  lg:mt-[80px] items-center  justify-center 2xl:mx-[10%] fhd:mx-[15%] 4k:mx-[25%] min-h-[60vh]   duration-700' style={{backgroundImage:`url(${bg}`,backgroundSize:window.innerWidth>960?'120% 140%':'cover',backgroundRepeat:'no-repeat',backgroundPosition:signup? 'left':'center'}}>
 
 
 
@@ -36,7 +36,7 @@ export default function Signup() {
 
 {/* -------------------------left-side------------------------- */}
 
-                <div className=' flex  w-[100%] md:w-[40%] h-[250px] md:h-auto md:flex    md:rounded-l-xl  md:border-[1px] md:border-r-0 overflow-hidden'>
+                <div className=' flex  w-[100%] md:w-[40%] h-[250px] md:h-auto  md:flex    md:rounded-l-xl  md:border-[1px] md:border-r-0 overflow-hidden'>
                
                     <img src='https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-money_tree.jpg?v=1680542101' alt="flower image" className='flex w-[100%] 
                     h-max md:h-auto
@@ -80,7 +80,7 @@ export default function Signup() {
                             {/* ------------------------------login password area------------- */}
                             <div className={password_section}>
 
-                            <input id='signup-form' type={showpassword ? "text" :"password"} placeholder='Password here' className=' w-[95%] 2xl:text-[30px]  bg-transparent ' required />
+                            <input id='signup-form' type={showpassword ? "text" :"password"} placeholder='Password here' className=' w-[95%]   bg-transparent ' required />
 
                              <div className=' flex text-xl md:text-2xl  2xl:text-[25px] fhd:text-[30px] 4k:text-[35px] w-max justify-center items-center' onClick={()=>setshowPassword(!showpassword)}>
                             {
@@ -96,8 +96,8 @@ export default function Signup() {
               {/* -------------------------login button -------------------------                */}
 
                             <div className='flex flex-col w-[100%] gap-3 2xl:gap-7 justify-center items-center mt-20 '>
-                            <button className='flex w-[100%] py-3 2xl:py-6 justify-center items-center  2xl:text-[12px] fhd:text-[15px] 4k:text-[20px] bg-green-900 uppercase hover:bg-green-800 duration-300'>Login</button>
-                            <p className='text-[13px]  2xl:text-lg  4k:text-2xl md:text-sm'>Don't have an account ? <u className='cursor-pointer font-[600]' onClick={()=>setSignup(true)}>create one</u></p>
+                            <button className='flex w-[100%] py-3 2xl:py-4 4k:py-6 justify-center items-center  2xl:text-[15px] 4k:text-[20px] bg-green-900 uppercase hover:bg-green-800 duration-300'>Login</button>
+                            <p className='text-[13px] antialiased 4k:text-xl md:text-sm'>Don't have an account ? <u className='cursor-pointer font-[600]' onClick={()=>setSignup(true)}>create one</u></p>
                             </div>
                            
 
@@ -142,9 +142,9 @@ export default function Signup() {
                             <label className='hidden'> Password</label>
 
                             <div className={password_section}>
-                            <input id='signup-form' type={showpassword ? "text" :"password"} placeholder='Password here' className=' w-[95%]  2xl:text-[30px]  bg-transparent  ' required />
+                            <input id='signup-form' type={showpassword ? "text" :"password"} placeholder='Password here' className=' w-[95%]    bg-transparent  ' required />
 
-                             <div className=' flex text-xl md:text-2xl w-max justify-center items-center 2xl:text-[25px] fhd:text-[30px] 4k:text-[35px] ' onClick={()=>setshowPassword(!showpassword)}>
+                             <div className=' flex text-xl md:text-2xl w-max justify-center items-center 2xl:text-[25px] fhd:text-[30px] 4k:text-[35px]' onClick={()=>setshowPassword(!showpassword)}>
                             {
                             showpassword? 
                             <PiEyeLight  />:
@@ -160,8 +160,8 @@ export default function Signup() {
     {/* ----------------------------sign up buton area ------------------------ */}
 
                             <div className='flex flex-col w-[100%] gap-3 justify-center items-center'>
-                            <button className='flex w-[100%] py-3 2xl:py-6  2xl:text-[12px] fhd:text-[15px] 4k:text-[20px] justify-center items-center  bg-green-900 uppercase hover:bg-green-800 duration-300'>Signup</button>
-                            <p className=' text-[13px] 2xl:text-lg  4k:text-2xl md:text-sm'>Already have a account ? <u className='cursor-pointer font-[700]' onClick={()=>setSignup(false) }>Login</u></p>
+                            <button className='flex w-[100%] py-3 2xl:py-4 4k:py-6  2xl:text-[15px]  4k:text-[20px] justify-center items-center  bg-green-900 uppercase hover:bg-green-800 duration-300'>Signup</button>
+                            <p className=' text-[13px] antialiased 4k:text-lg md:text-sm'>Already have a account ? <u className='cursor-pointer font-[700]' onClick={()=>setSignup(false) }>Login</u></p>
                             </div>
                            
 

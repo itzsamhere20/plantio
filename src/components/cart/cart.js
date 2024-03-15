@@ -7,6 +7,7 @@ export default function Cart() {
   const navigate = useNavigate()
 
   const [total, setTotal] = useState(0)
+  const [discount, setDiscount] =useState(0)
   const [totalItems, setTotalItems] = useState(0)
   const CartChecker= (JSON.parse(localStorage.getItem("cart")))!=null ? true : false;
   const carts=JSON.parse(localStorage.getItem("cart"))
@@ -24,10 +25,30 @@ export default function Cart() {
       }, 0) :''
       setTotal(total)
       setTotalItems(totalItems)
-      
+      Discount();
   
     }, [carts])
 
+    // -------- Discount -------------------
+
+    const Discount=()=>
+    {  if (total<300) setDiscount(0)
+       else if(total>300 && total<=500) setDiscount(2)
+      else if(total>500 && total<1000) setDiscount(3)
+      else if(total>1000 && total<2000) setDiscount(5)
+      else if(total>2000 && total<3000) setDiscount(8)
+      else if(total>3000 && total<5000) setDiscount(11)
+      else if(total>5000) setDiscount(15)
+      
+
+     
+
+    }
+
+    // ----------------------------Discounted Price----------------
+    const discountedPrice=(total*discount)/100;
+
+   
 //  ---------------------Increment function -------------------------- 
  
 const handleInc = (id) => {
@@ -209,6 +230,14 @@ const handleInc = (id) => {
           <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>*/}
 
 
+          {/* ----------------------Discount area-------------- */}
+
+          <div className="flex justify-between mt-10 mb-5 px-3 ">
+            <span className="font-semibold text-sm uppercase">Discount {discount}%</span>
+            <span className="font-semibold text-sm">{(discountedPrice).toFixed(2)}$</span>
+          </div>
+
+
 
 {/* ------------------------------- total amount area=------------- */}
 
@@ -216,7 +245,7 @@ const handleInc = (id) => {
           <div className="border-t mt-8"> 
             <div className="flex font-semibold justify-between py-6 text-sm uppercase px-3">
               <span>Total cost</span>
-              <span>${(total).toFixed(2)}</span>
+              <span>${(total-discountedPrice).toFixed(2)}</span>
             </div>
             <button className="bg-green-900 font-semibold hover:bg-green-800 py-3 text-sm text-white uppercase w-full">Checkout</button>
           </div>

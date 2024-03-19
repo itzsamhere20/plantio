@@ -66,7 +66,7 @@ export default function ProductDetail() {
 
   setTimeout(() => {
     setProductNotFound(true);
-  }, "3000");
+  }, "2000");
 
   useEffect(() => {
     ProductData();
@@ -358,7 +358,7 @@ export default function ProductDetail() {
                   </div>
                 )}
 
-                {/* --------------------------more products area----------------------- */}
+                {/* --------------------------Related  products area----------------------- */}
                 <div className="flex text-2xl lg:text-3xl text-gray-700 w-[100%] font-libre justify-center items-center py-16  ">
                   Related&nbsp; <i className="text-green-800">products</i>
                 </div>

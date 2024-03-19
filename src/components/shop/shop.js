@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { RiPlantFill } from "react-icons/ri";
-import Navbar from "../navbar/navbar";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
@@ -203,14 +202,17 @@ export default function Shop() {
                   >
                 
                     <div className=" bg-white p-3 md:p-5 lg:p-7 rounded-lg lg:rounded-xl flex flex-col w-[100%] duration-300 hover:-translate-y-1 lg:hover:-translate-y-4 cursor-pointer shadow-md">
+                    {/* -------------product image------------ */}
                       <img
                         src={data.image}
                         alt="product image"
                         className="block w-[100%] h-[170px] md:h-[200px] object-contain"
                       />
-                      <p className=" flex text-xs md:text-sm  font-poppins px-4 mt-5  max-h-[2rem] md:min-h-[2.5rem] lg:max-h-[2.7rem] overflow-hidden leading-[16px] text-center justify-center text-[#696969]">
+                      {/* -------------product title--------------- */}
+                      <p className=" flex text-xs md:text-sm  font-poppins px-4 mt-5  max-h-[2rem] md:min-h-[2.5rem] lg:max-h-[2.65rem] overflow-hidden leading-[16px] text-center justify-center text-[#696969]">
                         {data.title}
                       </p>
+                      {/* -------------product price--------------- */}
                       <p className=" flex text-xs  md:text-sm l:text-md font-libre px-5 mt-2   overflow-hidden  justify-center text-[#696969]">
                         ${data.price}
                       </p>

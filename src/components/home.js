@@ -13,7 +13,7 @@ import Footer from './footer/footer'
 export default function Home() {
   return (
     <div id='/home'>
-        
+        <Navbar />
         <Hero/>
         <Service/>
         <ShopNow/>
@@ -26,6 +26,7 @@ export default function Home() {
         <Story />
         <Discount />
         <Post />
+        <Footer/>
         
     </div>
   )

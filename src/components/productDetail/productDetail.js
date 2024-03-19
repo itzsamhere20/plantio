@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { RxCross2 } from "react-icons/rx";
+import Navbar from "../navbar/navbar";
+import Footer from "../footer/footer";
 
 export default function ProductDetail() {
   const navigate = useNavigate();
@@ -84,6 +86,7 @@ export default function ProductDetail() {
 
   return (
     <>
+    <Navbar/>
       {product.length < 1 ? (
         <>
           {/* -----------------------------------product-not
@@ -431,6 +434,7 @@ export default function ProductDetail() {
         </>
       )}
       {/* --------------------------main fragement close----------------------    */}
+    <Footer/>
     </>
   );
 }

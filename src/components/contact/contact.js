@@ -2,10 +2,14 @@ import React from "react";
 import contactImg from "../../assets/hero2.jpg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Footer from "../footer/footer";
+import Navbar from "../navbar/navbar";
 
 export default function Contact() {
   return (
-    // --------------------------------contact-main-----------------------
+    <>
+    <Navbar/>
+    {/* --------------------------------contact-main----------------------- */}
     <div className="flex  flex-col w-[100%]  border-b ">
 
       {/* -----------------------------image heading-area--------------------- */}
@@ -172,5 +176,7 @@ export default function Contact() {
 
       {/* -----------------------end main container--------------------- */}
     </div>
+    <Footer/>
+    </>
   );
 }

@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import empty_cart from "../../assets/cart-empty.png"
+import Navbar from '../navbar/navbar'
+import Footer from '../footer/footer'
 
 
 export default function Cart() {
@@ -95,6 +97,7 @@ const handleInc = (id) => {
 
 
 <>
+<Navbar/>
 {
     CartChecker?
     carts.length<1 ?
@@ -282,7 +285,7 @@ const handleInc = (id) => {
    
 
 }
-
+<Footer/>
     </>
 
 

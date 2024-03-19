@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import Navbar from "../navbar/navbar";
+import Footer from "../footer/footer";
 export default function Shop() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -43,6 +45,7 @@ export default function Shop() {
 
   return (
     <>
+    <Navbar/>
      {/* ------------shop-container ------------------ */}
     
     <div className=" border-b ">
@@ -226,6 +229,7 @@ export default function Shop() {
       }
      
     </div>
+    <Footer />
     </>
   );
 }

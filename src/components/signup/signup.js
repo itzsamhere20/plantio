@@ -4,6 +4,8 @@ import bg from "../../assets/signupbg.jpg"
 import signupImage from "../../assets/signup.jpg"
 import {PiEyeLight,PiEyeSlashLight} from"react-icons/pi"
 import {motion} from "framer-motion"
+import Navbar from '../navbar/navbar'
+import Footer from '../footer/footer'
 
 
 
@@ -20,7 +22,7 @@ export default function Signup() {
    
   return (
     <>
-    
+    <Navbar/>
     <motion.div
     initial={{ x: '-100%' }}
     animate={{ x: '0%' }}
@@ -179,6 +181,7 @@ export default function Signup() {
 
        
     </motion.div>
+    <Footer/>
     </>
 
   )

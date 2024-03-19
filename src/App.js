@@ -19,10 +19,12 @@ function App() {
   
   return (
     <>
+    
+     
     <AnimatePresence>
       
       <BrowserRouter>
-      <Navbar/>
+      
         <Routes>
           <Route path="/" Component={Home} />
        
@@ -36,11 +38,12 @@ function App() {
           <Route path="/faqs" Component={Faq} />
           <Route path="*" Component={NotFound} />
           <Route path="admin" Component={AdminPanel} />
+         
 
         </Routes>
-        <Footer />
-      </BrowserRouter>
      
+      </BrowserRouter>
+      
     </AnimatePresence>
     </>
   );

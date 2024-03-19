@@ -1,7 +1,11 @@
 import React from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import Footer from "../footer/footer";
+import Navbar from "../navbar/navbar";
 export default function Faq() {
   return (
+    <>
+    <Navbar/>
     <div className=" flex-[100%] flex-col px-5 md:px-10 lg:px-20 2xl:px-[10%] fhd:px-[15%] 4k:px-[25%] border-b">
       {/* ---------------heading area--------------------- */}
       <div className="flex flex-col w-[100%] mt-[20px] lg:mt-[100px] items-center gap-3 mb-10 lg:gap-5">
@@ -219,5 +223,7 @@ export default function Faq() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

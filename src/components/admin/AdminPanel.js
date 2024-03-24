@@ -6,6 +6,8 @@ import { AiOutlineRight } from "react-icons/ai";
 import Hero from "../hero/hero";
 import AdminHero from "./AdminHero/AdminHero";
 
+import Products from "./Products/Products";
+
 import Services from "../service/service";
 import AdminService from "./AdminService/AdminService";
 
@@ -36,7 +38,7 @@ import { motion } from "framer-motion";
 export default function AdminPanel() {
   const [page, setPage] = useState(
     <>
-      <Hero /> <AdminHero />
+      <Products />
     </>
   );
   const [hidemenu, sethidemenu] = useState(false);
@@ -103,7 +105,7 @@ export default function AdminPanel() {
           animate={{ x: "0%" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           exit={{ opacity: 0 }}
-          className="block overflow-auto fixed flex-col  w-[200px] bottom-0 pt-[70px] 2xl:pt-[120px] h-[100vh] shadow-[0px_0px_7px_0px_#c0c4c1] bg-gray-100 z-[10] transition-all duration-300"
+          className="flex overflow-auto fixed flex-col  w-[200px] bottom-0 pt-[70px] 2xl:pt-[120px] h-[100vh] shadow-[0px_0px_7px_0px_#c0c4c1] bg-gray-100 z-[10] transition-all duration-300"
           style={{
             width: window.innerWidth > 1536 ? "400px" : "200px",
             marginLeft:
@@ -121,7 +123,7 @@ export default function AdminPanel() {
             <li className={li} onClick={() => setPage(<AdminHero />)}>
               Sales
             </li>
-            <li className={li} onClick={() => setPage(<AdminService />)}>
+            <li className={li} onClick={() => setPage(<Products />)}>
               Products
             </li>
             <li className={li} onClick={() => setPage(<AdminService />)}>

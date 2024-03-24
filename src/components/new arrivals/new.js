@@ -10,11 +10,16 @@ export default function New() {
   
 
   const [products,setProducts]=useState([])
+
   
+
+
+  
+
   
   const fetchData=()=>
   {
-    axios.get('https://fakestoreapi.com/products?limit=7')
+    axios.get('https://fakestoreapi.com/products?limit=8')
     .then((res)=> setProducts(res.data) )
     
   }

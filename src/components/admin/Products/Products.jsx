@@ -47,14 +47,14 @@ export default function Products() {
   };
 
   // ------------fetching data from server----------
-  // useEffect(() => {
-  //   axios
-  //     .get("https://fakestoreapi.com/products")
-  //     .then((res) => setProduct(res.data));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => setProduct(res.data));
+  }, []);
 
-  // // --------- storing fetched data into local-------
-  // localStorage.setItem("products", JSON.stringify(Product));
+  // --------- storing fetched data into local-------
+  localStorage.setItem("products", JSON.stringify(Product));
   const localStorageProducts = localStorage.getItem("products");
   const products = localStorageProducts ? JSON.parse(localStorageProducts) : [];
 
